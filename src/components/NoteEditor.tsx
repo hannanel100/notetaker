@@ -31,10 +31,9 @@ export const NoteEditor = ({
           height="30vh"
           minWidth="100%"
           minHeight="30vh"
-          extensions={markdown({
-            base: markdownLanguage,
-            codeLanguages: languages,
-          })}
+          extensions={[
+            markdown({ base: markdownLanguage, codeLanguages: languages }),
+          ]}
           className="input-secondary border border-gray-300"
         />
       </div>
