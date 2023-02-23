@@ -21,6 +21,7 @@ specifiers:
   '@typescript-eslint/parser': ^5.47.1
   '@uiw/react-codemirror': ^4.19.9
   autoprefixer: ^10.4.7
+  classnames: ^2.3.2
   codemirror: ^6.0.1
   daisyui: ^2.50.2
   eslint: ^8.30.0
@@ -51,6 +52,7 @@ dependencies:
   '@trpc/react-query': 10.12.0_tij422wpfxfl3iixjhzsgwgs2e
   '@trpc/server': 10.12.0
   '@uiw/react-codemirror': 4.19.9_baspzbimxvs2elm6yopg5vnnpa
+  classnames: 2.3.2
   codemirror: 6.0.1
   next: 13.1.6_biqbaboplfbrettd7655fr4n2y
   next-auth: 4.19.2_3vryta7zmbcsw4rrqf4axjqggm
@@ -1213,6 +1215,10 @@ packages:
     optionalDependencies:
       fsevents: 2.3.2
     dev: true
+
+  /classnames/2.3.2:
+    resolution: {integrity: sha512-CSbhY4cFEJRe6/GQzIk5qXZ4Jeg5pcsP7b5peFSDpffpe1cqjASH/n9UTjBwOp6XpMSTwQ8Za2K5V02ueA7Tmw==}
+    dev: false
 
   /client-only/0.0.1:
     resolution: {integrity: sha512-IV3Ou0jSMzZrd3pZ48nLkT9DA7Ag1pnPzaiQhpW7c3RbcqqzvzzVu+L8gfqMp/8IM2MQtSiqaCxrrcfu8I8rMA==}

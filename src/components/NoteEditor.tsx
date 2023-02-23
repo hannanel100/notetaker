@@ -36,19 +36,19 @@ export const NoteEditor = ({
           ]}
           className="input-secondary border border-gray-300"
         />
-      </div>
-      <div className="card-actions">
-        <button
-          className="btn-primary btn"
-          onClick={() => {
-            onSave({ title, content: code });
-            setCode("");
-            setTitle("");
-          }}
-          disabled={title === "" || code === ""}
-        >
-          Save
-        </button>
+        <div className="card-actions flex justify-end">
+          <button
+            className="btn-primary btn"
+            onClick={() => {
+              onSave({ title, content: code });
+              setCode("");
+              setTitle("");
+            }}
+            disabled={title === "" || code === ""}
+          >
+            Save
+          </button>
+        </div>
       </div>
     </div>
   );
