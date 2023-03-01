@@ -53,8 +53,11 @@ const Content: React.FC = () => {
   const deleteTopic = api.topic.delete.useMutation({
     onSuccess: () => {
       void refetchTopics();
+      void refetchNotes();
+      setSelectedTopic(null);
     },
   });
+
   const { data: notes, refetch: refetchNotes } = api.note.getAll.useQuery(
     {
       topicId: selectedTopic?.id ?? "",
@@ -93,7 +96,7 @@ const Content: React.FC = () => {
 
                   <label
                     htmlFor="my-modal"
-                    className="btn-error btn-xs btn"
+                    className={`btn-error btn-xs btn `}
                     onClick={() => setOpen(!open)}
                   >
                     Delete
@@ -141,7 +144,14 @@ const Content: React.FC = () => {
           />
         </div>
       </div>
-      <Modal open={open} setOpen={setOpen} title={selectedTopic?.title ?? ""} />
+      <Modal
+        open={open}
+        setOpen={setOpen}
+        title={selectedTopic?.title ?? ""}
+        deleteTopic={() => {
+          void deleteTopic.mutate({ id: selectedTopic?.id ?? "" });
+        }}
+      />
     </>
   );
 };

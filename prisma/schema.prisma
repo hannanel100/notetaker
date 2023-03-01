@@ -82,6 +82,6 @@ model Note {
     updatedAt DateTime @updatedAt
     title     String
     content   String
-    topic     Topic    @relation(fields: [topicId], references: [id])
-    topicId   String
+    topic     Topic?   @relation(fields: [topicId], references: [id])
+    topicId   String?
 }

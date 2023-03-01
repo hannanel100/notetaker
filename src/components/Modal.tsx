@@ -1,23 +1,34 @@
-import { useEffect, type Dispatch, type SetStateAction } from "react";
-import cn from "classnames";
+import { type Dispatch, type SetStateAction } from "react";
 
 interface IProps {
   open: boolean;
   setOpen: Dispatch<SetStateAction<boolean>>;
   title: string;
+  deleteTopic: () => void;
 }
-export const Modal = ({ open, setOpen, title }: IProps) => {
-  let modalClass = "";
-  useEffect(() => {
-    modalClass = cn({
-      "modal modal-bottom sm:modal-middle": true,
-      "modal-open": open,
-    });
-  }, [open]);
+export const Modal = ({
+  open,
+  setOpen,
+  title,
+  deleteTopic,
+}: IProps) => {
+  const handleClose = () => {
+    console.log("close");
+    setOpen(false);
+  };
+  const handleDeleteTopic = () => {
+    console.log("delete");
+    deleteTopic();
+    setOpen(false);
+  };
   return (
     <>
       <input type="checkbox" id="my-modal" className="modal-toggle" />
-      <div className={modalClass}>
+      <div
+        className={`modal modal-bottom sm:modal-middle ${
+          open ? "modal-open" : ""
+        }`}
+      >
         <div className="modal-box">
           <h3 className="text-lg font-bold">
             Are you sure you want to Delete {title}?
@@ -26,15 +37,15 @@ export const Modal = ({ open, setOpen, title }: IProps) => {
             This will also delete all notes associated with this topic.
           </p>
           <div className="modal-action">
-            <label htmlFor="my-modal" className="btn-success btn">
-              Yep
+            <label htmlFor="my-modal">
+              <button className="btn-success btn" onClick={handleDeleteTopic}>
+                Yep
+              </button>
             </label>
-            <label
-              htmlFor="my-modal"
-              className="btn-warning btn"
-              onClick={() => setOpen(false)}
-            >
-              No way!
+            <label htmlFor="my-modal">
+              <button className="btn-warning btn" onClick={handleClose}>
+                No way!
+              </button>
             </label>
           </div>
         </div>
