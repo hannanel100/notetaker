@@ -1,7 +1,6 @@
 import { type NextPage } from "next";
 import Head from "next/head";
-import {  useSession } from "next-auth/react";
-
+import { signIn, useSession } from "next-auth/react";
 
 import { api, type RouterOutputs } from "~/utils/api";
 import { Header } from "~/components/Header";
@@ -76,6 +75,19 @@ const Content: React.FC = () => {
       void refetchNotes();
     },
   });
+  if (!sessionData?.user)
+    return (
+      <div className="container mx-auto mt-24 border border-solid  border-red-500 text-center text-2xl font-bold">
+        <div className="flex flex-col gap-4">
+          Please sign in to continue
+          <div>
+            <button className="btn-primary btn" onClick={() => void signIn()}>
+              Sign in
+            </button>
+          </div>
+        </div>
+      </div>
+    );
   return (
     <>
       <div className="mx-5 mt-5 grid grid-cols-4 gap-4">

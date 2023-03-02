@@ -5,6 +5,7 @@ specifiers:
   '@codemirror/language-data': ^6.1.0
   '@codemirror/view': ^6.9.1
   '@next-auth/prisma-adapter': ^1.0.5
+  '@playwright/test': ^1.31.1
   '@prisma/client': ^4.9.0
   '@tailwindcss/typography': ^0.5.9
   '@tanstack/react-query': ^4.20.2
@@ -24,6 +25,7 @@ specifiers:
   classnames: ^2.3.2
   codemirror: ^6.0.1
   daisyui: ^2.50.2
+  dotenv: ^16.0.3
   eslint: ^8.30.0
   eslint-config-next: 13.1.6
   next: 13.1.6
@@ -54,6 +56,7 @@ dependencies:
   '@uiw/react-codemirror': 4.19.9_baspzbimxvs2elm6yopg5vnnpa
   classnames: 2.3.2
   codemirror: 6.0.1
+  dotenv: 16.0.3
   next: 13.1.6_biqbaboplfbrettd7655fr4n2y
   next-auth: 4.19.2_3vryta7zmbcsw4rrqf4axjqggm
   react: 18.2.0
@@ -63,6 +66,7 @@ dependencies:
   zod: 3.20.6
 
 devDependencies:
+  '@playwright/test': 1.31.1
   '@tailwindcss/typography': 0.5.9_tailwindcss@3.2.7
   '@types/eslint': 8.21.1
   '@types/node': 18.14.0
@@ -617,6 +621,17 @@ packages:
       picocolors: 1.0.0
       tiny-glob: 0.2.9
       tslib: 2.5.0
+    dev: true
+
+  /@playwright/test/1.31.1:
+    resolution: {integrity: sha512-IsytVZ+0QLDh1Hj83XatGp/GsI1CDJWbyDaBGbainsh0p2zC7F4toUocqowmjS6sQff2NGT3D9WbDj/3K2CJiA==}
+    engines: {node: '>=14'}
+    hasBin: true
+    dependencies:
+      '@types/node': 18.14.0
+      playwright-core: 1.31.1
+    optionalDependencies:
+      fsevents: 2.3.2
     dev: true
 
   /@prisma/client/4.10.1_prisma@4.10.1:
@@ -1450,6 +1465,11 @@ packages:
     dependencies:
       esutils: 2.0.3
     dev: true
+
+  /dotenv/16.0.3:
+    resolution: {integrity: sha512-7GO6HghkA5fYG9TYnNxi14/7K9f5occMlp3zXAuSxn7CKCxt9xbNWG7yF8hTCSUchlfWSe3uLmlPfigevRItzQ==}
+    engines: {node: '>=12'}
+    dev: false
 
   /electron-to-chromium/1.4.305:
     resolution: {integrity: sha512-WETy6tG0CT5gm1O+xCbyapWNsCcmIvrn4NHViIGYo2AT8FV2qUCXdaB+WqYxSv/vS5mFqhBYnfZAAkVArjBmUg==}
@@ -2985,6 +3005,12 @@ packages:
   /pify/2.3.0:
     resolution: {integrity: sha512-udgsAY+fTnvv7kI7aaxbqwWNb0AHiB0qBO89PZKPkoTmGOgdbrHDKD+0B2X4uTfJ/FT1R09r9gTsjUjNJotuog==}
     engines: {node: '>=0.10.0'}
+    dev: true
+
+  /playwright-core/1.31.1:
+    resolution: {integrity: sha512-JTyX4kV3/LXsvpHkLzL2I36aCdml4zeE35x+G5aPc4bkLsiRiQshU5lWeVpHFAuC8xAcbI6FDcw/8z3q2xtJSQ==}
+    engines: {node: '>=14'}
+    hasBin: true
     dev: true
 
   /postcss-import/14.1.0_postcss@8.4.21:

@@ -7,7 +7,8 @@
     "dev": "next dev",
     "postinstall": "prisma generate",
     "lint": "next lint",
-    "start": "next start"
+    "start": "next start",
+    "test": "playwright test"
   },
   "dependencies": {
     "@codemirror/lang-markdown": "^6.1.0",
@@ -23,6 +24,7 @@
     "@uiw/react-codemirror": "^4.19.9",
     "classnames": "^2.3.2",
     "codemirror": "^6.0.1",
+    "dotenv": "^16.0.3",
     "next": "13.1.6",
     "next-auth": "^4.19.0",
     "react": "18.2.0",
@@ -32,6 +34,7 @@
     "zod": "^3.20.2"
   },
   "devDependencies": {
+    "@playwright/test": "^1.31.1",
     "@tailwindcss/typography": "^0.5.9",
     "@types/eslint": "^8.21.1",
     "@types/node": "^18.11.18",
