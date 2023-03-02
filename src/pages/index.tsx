@@ -1,7 +1,6 @@
 import { type NextPage } from "next";
 import Head from "next/head";
-import {  useSession } from "next-auth/react";
-
+import { useSession } from "next-auth/react";
 
 import { api, type RouterOutputs } from "~/utils/api";
 import { Header } from "~/components/Header";
@@ -80,6 +79,7 @@ const Content: React.FC = () => {
     <>
       <div className="mx-5 mt-5 grid grid-cols-4 gap-4">
         <div className="px-2">
+          <h2 className="text-3xl font-bold">Topics</h2>
           <ul className="bg-bas-100 menu rounded-box my-0 w-full py-2">
             {topics?.map((topic) => (
               <li key={topic.id}>
@@ -116,8 +116,9 @@ const Content: React.FC = () => {
             }}
           />
         </div>
-        <div className="col-span-3">
-          <h3 className="text-2xl font-bold">
+        <div className="col-span-3 flex flex-col gap-4">
+          <h2 className="text-3xl font-bold">Notes</h2>
+          <h3 className="text-xl font-bold">
             {selectedTopic?.title ?? "Select a topic"}
           </h3>
           <div>
