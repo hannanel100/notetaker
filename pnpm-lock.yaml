@@ -37,6 +37,7 @@ specifiers:
   react-markdown: ^8.0.5
   superjson: 1.9.1
   tailwindcss: ^3.2.0
+  theme-change: ^2.5.0
   typescript: ^4.9.4
   zod: ^3.20.2
 
@@ -60,6 +61,7 @@ dependencies:
   react-dom: 18.2.0_react@18.2.0
   react-markdown: 8.0.5_pmekkgnqduwlme35zpnqhenc34
   superjson: 1.9.1
+  theme-change: 2.5.0
   zod: 3.20.6
 
 devDependencies:
@@ -3566,6 +3568,10 @@ packages:
   /text-table/0.2.0:
     resolution: {integrity: sha512-N+8UisAXDGk8PFXP4HAzVR9nbfmVJ3zYLAWiTIoqC5v5isinhr+r5uaO8+7r3BMfuNIufIsA7RdpVgacC2cSpw==}
     dev: true
+
+  /theme-change/2.5.0:
+    resolution: {integrity: sha512-B/UdsgdHAGhSKHTAQnxg/etN0RaMDpehuJmZIjLMDVJ6DGIliRHGD6pODi1CXLQAN9GV0GSyB3G6yCuK05PkPQ==}
+    dev: false
 
   /tiny-glob/0.2.9:
     resolution: {integrity: sha512-g/55ssRPUjShh+xkfx9UPDXqhckHEsHr4Vd9zX55oSdGZc/MD0m3sferOkwWtp98bv+kcVfEHtRJgBVJzelrzg==}

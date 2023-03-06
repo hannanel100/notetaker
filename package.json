@@ -29,6 +29,7 @@
     "react-dom": "18.2.0",
     "react-markdown": "^8.0.5",
     "superjson": "1.9.1",
+    "theme-change": "^2.5.0",
     "zod": "^3.20.2"
   },
   "devDependencies": {
