@@ -6,7 +6,17 @@ import { themeChange } from "theme-change";
 export const Header = () => {
   const { data: session } = useSession();
   const [firstName, lastName] = session?.user?.name?.split(" ") ?? [];
-  const themeValues = ["cupcake", "bumblebee", "winter"];
+  const themeValues = [
+    "light",
+    "dark",
+    "cupcake",
+    "bumblebee",
+    "winter",
+    "emerald",
+    "corporate",
+    "forest",
+    "halloween",
+  ];
   useEffect(() => {
     themeChange(false);
   }, []);
@@ -42,10 +52,14 @@ export const Header = () => {
             >
               <li>
                 <select className="select w-full max-w-xs" data-choose-theme>
-                  <option selected>Choose Theme</option>
+                  <option value="">Choose Theme</option>
                   {themeValues.map((theme) => (
-                    <option key={theme} className="menu-item">
-                      {theme}
+                    <option
+                      key={theme.toLocaleLowerCase()}
+                      value={theme.toLocaleLowerCase()}
+                      className="menu-item"
+                    >
+                      {theme.charAt(0).toUpperCase() + theme.slice(1)}
                     </option>
                   ))}
                 </select>
@@ -62,8 +76,8 @@ export const Header = () => {
           </div>
         ) : (
           <button
-            className="btn-ghost rounded-btn btn"
-            onClick={() => void signIn()}
+            className="btn-primary rounded-btn btn"
+            onClick={() => void signIn("github")}
           >
             Sign in
           </button>
