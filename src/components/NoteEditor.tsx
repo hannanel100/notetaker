@@ -27,7 +27,7 @@ export const NoteEditor = ({
         <CodeMirror
           value={code}
           onChange={(value) => setCode(value)}
-          width="500px"
+          // maxWidth="500px"
           height="30vh"
           minWidth="100%"
           minHeight="30vh"

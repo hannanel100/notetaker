@@ -77,8 +77,8 @@ const Content: React.FC = () => {
   });
   return (
     <>
-      <div className="mx-5 mt-5 grid grid-cols-4 gap-4">
-        <div className="px-2">
+      <div className="mx-auto mt-5 grid max-w-screen-2xl grid-cols-2 place-content-center gap-4 px-5 md:grid-cols-4">
+        <div className="col-span-2 px-2 md:col-span-1">
           <h2 className="text-3xl font-bold">Topics</h2>
           <ul className="bg-bas-100 menu rounded-box my-0 w-full py-2">
             {topics?.map((topic) => (
